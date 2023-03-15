@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Porcentagem</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Golos+Text">
+    <style>
+      /* Estilos para a aparência dos boxes e botão */
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        font-family: 'Golos Text', sans-serif;
+      }
+      body {
+			background: url("images/teste3.png");
+      padding: 10px;
+      border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+            font-family: 'Golos Text', sans-serif;
+		}
+    h1:nth-child(1) {
+            color: #6564bd;
+            font-family: 'Golos Text', sans-serif;
+            word-spacing: -1px;
+            margin: 0;
+            margin-top: 75px;
+      }
+      h4:nth-child(2) {
+            color: #504f96;
+            font-family: 'Golos Text', sans-serif;
+            margin: 0;
+      }
+      h3:nth-child(3) {
+           margin-top: 25px;
+            font-family: 'Golos Text', sans-serif;
+      }
+      .alert-box {
+  position: relative;
+  background-color: #a52121;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#resultado {
+  margin: 10px 0;
+  font-size: 24px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="alert-box">
+      <span class="close-btn">&times;</span>
+      <p>Me calcular com alguem pode se resultar em um resultado forçado ou bugado / Caio não se responsabiliza por brigas ou quaiquer problemas sobre o site, isso foi criado com fins de conquistar mais experiencias de programação.</p>
+    </div>
+    <h1>Calculador de chances</h1>
+	<h5>By: Caio D. D. / Caio Daiki não o diniz</h5>
+</h3>----------------------------------------------------------------------------------</h3>
+	<h3>Calculador de chances</h3>
+    <div class="box">
+      <label for="texto1">Pessoa 1:</label>
+      <input type="text" id="texto1"><br>
+      <label for="texto2">Pessoa 2:</label>
+      <input type="text" id="texto2"><br>
+    </div>
+    <button onclick="calcularPorcentagem()">Calcular</button>
+    <div id="resultado" class="box"></div>
+    <script>
+      function calcularPorcentagem() {
+        // Obtém os valores dos textos
+        let texto1 = document.getElementById("texto1").value;
+        let texto2 = document.getElementById("texto2").value;
+    
+        // Verifica se a palavra-chave aparece duas vezes nos textos
+        let palavras = (texto1 + ' ' + texto2).toLowerCase().split(' ');
+        let palavraChave1 = 'mel';
+        let palavraChave2 = 'caio';
+        let porcentagem = palavras.filter(palavra => palavra === palavraChave1.toLowerCase() || palavra === palavraChave2.toLowerCase()).length === 2 ? 100 : Math.floor(Math.random() * 100) + 1;
+    
+        // Exibe o resultado
+        let resultado = document.getElementById("resultado");
+        resultado.innerHTML = `${texto1} ❤ ${porcentagem}% ❤ ${texto2}`;
+      }
+      </script>
+  </body>
+</html>

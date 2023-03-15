@@ -1,0 +1,22 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  .alert-box {
+    position: relative;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
